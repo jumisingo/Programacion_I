@@ -10,6 +10,7 @@ package clase6;
  */
 public class Usuario {
     private String password="";
+    private Rol rol;
     
     public String getPassword(){
         //cantidad de caracteres que tenga el atributo password
@@ -54,12 +55,19 @@ public class Usuario {
         }
     }
     
-    public Usuario(){
-    this.password= "fidelitas";
-    //inicializacion de valores de atributos
+    public Rol getRol(){
+        return this.rol;
     }
     
+    public void setRol(Rol rol){
+        this.rol = rol;
+    }
     public Usuario (String password){
        this.password = password;
+    }
+    
+    public Usuario (){
+        //Math.random() *1000, 
+        //Character.forDigit(, 0);
     }
 }

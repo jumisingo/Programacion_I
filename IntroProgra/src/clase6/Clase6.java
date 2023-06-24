@@ -21,5 +21,11 @@ public class Clase6 {
         usuario.setPassword(password);
         
         JOptionPane.showMessageDialog(null, usuario.getPassword());
+        
+        
+        //definicion del rol
+        usuario.setRol(Rol.Supervisor);
+        
+        JOptionPane.showMessageDialog(null, usuario.getRol().ordinal());
     }
 }
