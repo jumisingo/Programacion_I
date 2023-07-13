@@ -1,6 +1,9 @@
 
 package clase8;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  *
  * @author mbp_jay
@@ -30,6 +33,29 @@ public class Clase8 {
         //ciclo para leer estudiantes:
         for( int contador = 0; contador < 10; contador++){
             System.out.println("Nombre: "+arrayEstudiante[contador].getNombre() + ", Apellido: "+ arrayEstudiante[contador].getApellido()+ ", Edad: "+arrayEstudiante[contador].getEdad());
+        }
+        
+        
+        
+        
+        //Ejercicio ordenar array
+        Estudiante[] arrayEjercicio = new Estudiante[10];
+        //Crea datos
+        
+        for(int contador =0; contador<10; contador++){
+            //La edad se genera aleatoriamente con Math.Random();
+            arrayEjercicio[contador] = new Estudiante("pablo", "gonzalez");
+        }
+        
+        //Requerimiento: ordenar el array con base en la edad.
+        //arrayEjercicio.Sort;
+        Arrays.sort(arrayEjercicio , Comparator.comparing(Estudiante::getEdad));
+        
+        
+        
+        //ciclo para leer estudiantes:
+        for( int contador = 0; contador < 10; contador++){
+            System.out.println("Nombre: "+arrayEjercicio[contador].getNombre() + ", Apellido: "+ arrayEjercicio[contador].getApellido()+ ", Edad: "+arrayEjercicio[contador].getEdad());
         }
     }
     

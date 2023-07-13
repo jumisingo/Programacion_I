@@ -16,6 +16,14 @@ public class Estudiante {
     public Estudiante(){
     }
     
+    public Estudiante(String nombre, String apellido){
+        //Crea una edad random.
+     
+        this.edad = (int)(Math.random()*1000);
+        this.nombre = nombre+this.edad;
+        this.apellido = apellido+this.edad;
+    }
+    
     public Estudiante(String nombre, String apellido, int edad){
         this.nombre = nombre;
         this.apellido = apellido;
